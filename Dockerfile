@@ -12,5 +12,6 @@ RUN cd /usr/local/src/freeswitch; ./bootstrap.sh -j
 RUN cd /usr/local/src/freeswitch; ./configure --prefix=/opt/freeswitch
 RUN cd /usr/local/src/freeswitch; make; make install
 RUN cd /usr/local/src/freeswitch; make all cd-sounds-install cd-moh-install
+RUN cd /usr/local/src/freeswitch
 RUN ls
 RUN ./freeswitch
