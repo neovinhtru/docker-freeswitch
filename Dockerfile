@@ -6,6 +6,7 @@ RUN env GIT_SSL_NO_VERIFY=true git clone https://stash.freeswitch.org/scm/fs/fre
 RUN apt-get install sqlite3 libsqlite3-dev
 RUN apt-get install libpcre3 libpcre3-dev
 RUN apt-get install libspeexdsp-dev -y
+RUN apt-get install libldns-dev -y
 RUN cd /usr/local/src/freeswitch; ./bootstrap.sh -j
 RUN cd /usr/local/src/freeswitch; ./configure --prefix=/opt/freeswitch
 RUN cd /usr/local/src/freeswitch; make; make install
