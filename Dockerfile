@@ -13,5 +13,4 @@ RUN cd /usr/local/src/freeswitch; ./configure --prefix=/opt/freeswitch
 RUN cd /usr/local/src/freeswitch; make; make install
 RUN cd /usr/local/src/freeswitch; make all cd-sounds-install cd-moh-install
 WORKDIR /usr/local/src/freeswitch
-RUN chmod -R 755 freeswitch
 RUN sudo ./freeswitch -ncwait
