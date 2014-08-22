@@ -1,3 +1,4 @@
 #!/bin/bash
-/opt/freeswitch/bin/freeswitch -nc
-echo "helaa" > /usr/test.txt
+source /opt/freeswitch/bin/freeswitc
+exec /opt/freeswitch/bin/freeswitch -nc
+
