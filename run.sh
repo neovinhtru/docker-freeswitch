@@ -1,3 +1,2 @@
 #!/bin/bash
-/opt/freeswitch/bin/freeswitch -nc
-echo "shit"
+/opt/freeswitch/bin/freeswitch -ncwait
