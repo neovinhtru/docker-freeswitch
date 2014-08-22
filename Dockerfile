@@ -16,7 +16,7 @@ RUN cd /usr/local/src/freeswitch; make all cd-sounds-install cd-moh-install
 #RUN sudo /opt/freeswitch/bin/freeswitch -ncwait
 RUN apt-get update -y -qq
 
-sudo apt-get -y --force-yes install freeswitch-meta-vanilla
+RUN apt-get -y --force-yes install freeswitch-meta-vanilla
 RUN cp -a /usr/share/freeswitch/conf/vanilla /etc/freeswitch
 
 ENV DEBIAN_FRONTEND dialog
