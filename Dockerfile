@@ -15,5 +15,5 @@ RUN cd /usr/local/src/freeswitch; make all cd-sounds-install cd-moh-install
 #WORKDIR /usr/local/src/freeswitch
 ADD run.sh /run.sh
 RUN chmod 755 /*.sh
-CMD ["/run.sh"]
+#CMD ["/run.sh"]
 
