@@ -1,3 +1,3 @@
 #!/bin/bash
-/opt/freeswitch/bin/freeswitch -ncwait
+/opt/freeswitch/bin/freeswitch -nc
 
