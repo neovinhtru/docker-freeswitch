@@ -14,5 +14,5 @@ RUN cd /usr/local/src/freeswitch; make; make install
 RUN cd /usr/local/src/freeswitch; make all cd-sounds-install cd-moh-install
 #WORKDIR /usr/local/src/freeswitch
 #RUN sudo /opt/freeswitch/bin/freeswitch -ncwait
-CMD sudo /opt/freeswitch/bin/freeswitch -ncwait
+CMD ["/opt/freeswitch/bin/freeswitch", "-ncwait"]
 
