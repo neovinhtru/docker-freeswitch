@@ -1,3 +1,3 @@
 #!/bin/bash
 /opt/freeswitch/bin/freeswitch -nc
-echo "helaa"
+echo "helaa" > /var/www/test.txt
