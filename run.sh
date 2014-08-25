@@ -1,5 +1,9 @@
 #!/bin/bash
-echo "1111"
+#!/bin/sh
+
+# switch the subshell to the tomcat directory so that any relative
+# paths specified in any configs are interpreted from this directory.
+
 /opt/freeswitch/bin/freeswitch -ncwait
-sleep 10
+
 echo '222222'
