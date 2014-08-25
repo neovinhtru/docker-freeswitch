@@ -18,7 +18,7 @@ RUN cd /usr/local/src/freeswitch; make all cd-sounds-install cd-moh-install
 ADD ./01_example.com.xml /opt/freeswitch/conf/dialplan/default/01_example.com.xml
 
 WORKDIR /usr/local/src/freeswitch/scripts
-RUN env GIT_SSL_NO_VERIFY=true git clone https://manhhd6058:Abc%40123@github.com/jpijeff/Vo-RXSS-IP.git /usr/local/src/freeswitch/scripts
+RUN env GIT_SSL_NO_VERIFY=true git clone https://manhhd6058:Abc%40123@github.com/jpijeff/Vo-RXSS-IP.git
 
 ADD ./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 CMD ["/usr/bin/supervisord"]
