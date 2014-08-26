@@ -9,6 +9,8 @@ RUN apt-get install libspeexdsp-dev -y
 RUN apt-get install libldns-dev -y
 RUN apt-get install libedit-dev -y
 RUN apt-get install -y supervisor
+RUN apt-get install -y openssh-server
+
 RUN cd /usr/local/src/freeswitch; ./bootstrap.sh -j
 ADD ./modules.conf /usr/local/src/freeswitch/modules.conf
 RUN cd /usr/local/src/freeswitch; ./configure --prefix=/opt/freeswitch
@@ -20,7 +22,7 @@ ADD ./01_example.com.xml /opt/freeswitch/conf/dialplan/default/01_example.com.xm
 WORKDIR /usr/local/src/freeswitch/scripts
 RUN env GIT_SSL_NO_VERIFY=true git clone https://manhhd6058:Abc%40123@github.com/jpijeff/Vo-RXSS-IP.git
 
-RUN apt-get update && apt-get install -y openssh-server
+
 RUN mkdir /var/run/sshd
 RUN echo 'root:screencast' |chpasswd
 
