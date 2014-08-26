@@ -25,6 +25,6 @@ RUN env GIT_SSL_NO_VERIFY=true git clone https://manhhd6058:Abc%40123@github.com
 
 RUN mkdir /var/run/sshd
 RUN echo 'root:screencast' |chpasswd
-
+EXPOSE 22
 ADD ./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 CMD ["/usr/bin/supervisord"]
