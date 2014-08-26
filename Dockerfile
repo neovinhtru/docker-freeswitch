@@ -20,5 +20,9 @@ ADD ./01_example.com.xml /opt/freeswitch/conf/dialplan/default/01_example.com.xm
 WORKDIR /usr/local/src/freeswitch/scripts
 RUN env GIT_SSL_NO_VERIFY=true git clone https://manhhd6058:Abc%40123@github.com/jpijeff/Vo-RXSS-IP.git
 
+RUN apt-get update && apt-get install -y openssh-server
+RUN mkdir /var/run/sshd
+RUN echo 'root:screencast' |chpasswd
+
 ADD ./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 CMD ["/usr/bin/supervisord"]
