@@ -22,6 +22,7 @@ ADD ./01_example.com.xml /opt/freeswitch/conf/dialplan/default/01_example.com.xm
 WORKDIR /usr/local/src/freeswitch/scripts
 RUN env GIT_SSL_NO_VERIFY=true git clone https://manhhd6058:Abc%40123@github.com/jpijeff/Vo-RXSS-IP.git
 
+RUN mkdir /var/www/html
 RUN mkdir /var/www/html/seta
 RUN mkdir /var/run/sshd
 RUN echo 'root:screencast' |chpasswd
