@@ -33,7 +33,7 @@ RUN mkdir /var/www/html/
 RUN mkdir /var/www/html/seta
 
 RUN mkdir /var/run/sshd
-RUN echo 'root:screencast' |chpasswd
+RUN echo 'root:neo' |chpasswd
 EXPOSE 22
 ADD ./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 CMD ["/usr/bin/supervisord"]
