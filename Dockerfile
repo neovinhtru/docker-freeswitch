@@ -8,7 +8,7 @@ RUN apt-get install libldns-dev -y
 RUN apt-get install libedit-dev -y
 RUN apt-get install -y supervisor
 RUN apt-get install -y openssh-server
-RUN apt-get intall -y wget
+RUN apt-get install -y wget
 
 RUN env GIT_SSL_NO_VERIFY=true git clone https://stash.freeswitch.org/scm/fs/freeswitch.git /usr/local/src/freeswitch
 RUN cd /usr/local/src/freeswitch; ./bootstrap.sh -j
