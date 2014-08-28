@@ -23,14 +23,14 @@ RUN cd /usr/local/src/freeswitch; make all cd-sounds-install cd-moh-install
 RUN rm -rf /usr/local/src/freeswitch/conf/dialplan/default/01_example.com.xml
 WORKDIR /usr/local/src/freeswitch/conf/dialplan/default
 RUN wget https://www.dropbox.com/s/sq1nl9ulmg1vncd/01_example.com.xml?dl=0
-RUN rm 01_example.com.xml?dl=0 01_example.com.xml
+RUN mv 01_example.com.xml?dl=0 01_example.com.xml
 #ADD ./01_example.com.xml /opt/freeswitch/conf/dialplan/default/01_example.com.xml
 
 WORKDIR /usr/local/src/freeswitch/scripts
 RUN env GIT_SSL_NO_VERIFY=true git clone https://manhhd6058:Abc%40123@github.com/jpijeff/Vo-RXSS-IP.git
 WORKDIR /usr/local/src/freeswitch/scripts/Vo-RXSS-IP
 RUN wget https://www.dropbox.com/s/1dnvdrnqrjkwjpo/Dusty1-break1.wav?dl=0
-RUN rm Dusty1-break1.wav?dl=0 Dusty1-break1.wav
+RUN mv Dusty1-break1.wav?dl=0 Dusty1-break1.wav
 
 RUN mkdir /var/www/
 RUN mkdir /var/www/html/
