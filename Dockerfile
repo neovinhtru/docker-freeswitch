@@ -15,10 +15,11 @@ RUN cd /usr/local/src/freeswitch; ./bootstrap.sh -j
 RUN rm -rf /usr/local/src/freeswitch/modules.conf
 WORKDIR /usr/local/src/freeswitch
 RUN wget https://www.dropbox.com/s/r6k6xbrwswvy3bt/modules.conf?dl=0
-#ADD ./modules.conf /usr/local/src/freeswitch/modules.conf
-RUN cd /usr/local/src/freeswitch; ./configure #--prefix=/opt/freeswitch
-RUN cd /usr/local/src/freeswitch; make; make install
-RUN cd /usr/local/src/freeswitch; make all cd-sounds-install cd-moh-install
+#ADD ./modules.conf /usr/local/src/freeswitch/modules.confake
+RUN ./configure #--prefix=/opt/freeswitch
+#RUN make; make install
+RUN make
+RUN make all cd-sounds-install cd-moh-install
 
 RUN rm -rf /usr/local/src/freeswitch/conf/dialplan/default/01_example.com.xml
 WORKDIR /usr/local/src/freeswitch/conf/dialplan/default
