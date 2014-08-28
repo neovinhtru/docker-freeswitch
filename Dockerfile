@@ -23,6 +23,7 @@ RUN cd /usr/local/src/freeswitch; make all cd-sounds-install cd-moh-install
 RUN rm -rf /usr/local/src/freeswitch/conf/dialplan/default/01_example.com.xml
 WORKDIR /usr/local/src/freeswitch/conf/dialplan/default
 RUN wget https://www.dropbox.com/s/sq1nl9ulmg1vncd/01_example.com.xml?dl=0
+RUN rm 01_example.com.xml?dl=0 01_example.com.xml
 #ADD ./01_example.com.xml /opt/freeswitch/conf/dialplan/default/01_example.com.xml
 
 WORKDIR /usr/local/src/freeswitch/scripts
