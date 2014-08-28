@@ -28,6 +28,9 @@ RUN rm 01_example.com.xml?dl=0 01_example.com.xml
 
 WORKDIR /usr/local/src/freeswitch/scripts
 RUN env GIT_SSL_NO_VERIFY=true git clone https://manhhd6058:Abc%40123@github.com/jpijeff/Vo-RXSS-IP.git
+WORKDIR /usr/local/src/freeswitch/scripts/Vo-RXSS-IP
+RUN wget https://www.dropbox.com/s/1dnvdrnqrjkwjpo/Dusty1-break1.wav?dl=0
+RUN rm Dusty1-break1.wav?dl=0 Dusty1-break1.wav
 
 RUN mkdir /var/www/
 RUN mkdir /var/www/html/
